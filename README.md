@@ -80,3 +80,4 @@ The full-scale training on EC2 will follow established best practices for this t
 ## Team Members
 
 *   **Moinuddin Hasan**: [moinuddin.hasan.raichur@gmail.com]
+*   **Sharan Raghu Venkatachalam**
