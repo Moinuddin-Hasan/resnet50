@@ -15,9 +15,9 @@ echo "Starting ResNet-50 training..."
 nohup python train.py \
     --epochs 90 \
     --batch-size 256 \
-    > ../outputs/training_console.log 2>&1 &
+    > outputs/training_console.log 2>&1 &
 
 echo "Training started in the background."
-echo "You can monitor the output with: tail -f ../outputs/training_console.log"
-echo "You can check the Markdown logs with: cat ../outputs/training_log.md"
+echo "You can monitor the output with: tail -f outputs/training_console.log"
+echo "You can check the Markdown logs with: cat outputs/training_log.md"
 echo "To see the running process, use: ps aux | grep train.py"

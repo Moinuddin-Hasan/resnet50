@@ -27,7 +27,7 @@ def train_one_epoch(model, criterion, optimizer, data_loader, device, epoch, num
         inputs, labels = inputs.to(device, non_blocking=True), labels.to(device, non_blocking=True)
         optimizer.zero_grad(set_to_none=True) # More efficient
 
-        with autocast():
+        with autocast(enabled=torch.cuda.is_available()):
             outputs = model(inputs)
             loss = criterion(outputs, labels)
 
@@ -54,7 +54,7 @@ def validate(model, criterion, data_loader, device):
         for inputs, labels in progress_bar:
             inputs, labels = inputs.to(device, non_blocking=True), labels.to(device, non_blocking=True)
 
-            with autocast():
+            with autocast(enabled=torch.cuda.is_available()):
                 outputs = model(inputs)
                 loss = criterion(outputs, labels)
 
@@ -82,7 +82,7 @@ def main(args):
         weight_decay=config.WEIGHT_DECAY,
     )
     scheduler = CosineAnnealingLR(optimizer, T_max=args.epochs)
-    scaler = GradScaler()
+    scaler = GradScaler(enabled=torch.cuda.is_available())
     
     best_val_acc = 0.0
     

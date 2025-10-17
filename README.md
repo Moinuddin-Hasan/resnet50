@@ -65,8 +65,8 @@ The full-scale training on EC2 will follow established best practices for this t
 ```
 .
 ├── README.md                # Project overview and documentation
-├── notebooks/
-│   └── 01_pipeline_test.ipynb # Colab notebook for testing the pipeline on a subset
+├── collab/
+│   └── resnet50.ipynb       # Colab notebook for testing the pipeline on a subset
 ├── src/
 │   ├── config.py              # Centralized hyperparameters
 │   ├── dataset.py             # Data loading and augmentation logic
