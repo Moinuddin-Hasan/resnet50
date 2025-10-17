@@ -75,7 +75,12 @@ def main(args):
     model = create_resnet50(config.NUM_CLASSES).to(device)
     
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=args.learning_rate, momentum=config.MOMENTUM, weight_decay=config.WEIGHT_DEAY)
+    optimizer = optim.SGD(
+        model.parameters(),
+        lr=args.learning_rate,
+        momentum=config.MOMENTUM,
+        weight_decay=config.WEIGHT_DECAY,
+    )
     scheduler = CosineAnnealingLR(optimizer, T_max=args.epochs)
     scaler = GradScaler()
     
