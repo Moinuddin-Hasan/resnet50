@@ -15,7 +15,7 @@ S3_BUCKET=$1
 cd ../src/
 
 # Activate the correct conda environment
-source /opt/conda/bin/activate pytorch_latest_p37
+source /opt/conda/bin/activate pytorch
 
 echo "--- Starting ResNet-50 Training ---"
 
