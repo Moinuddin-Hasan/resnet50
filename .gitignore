@@ -11,8 +11,8 @@ imagenette2-320/
 
 outputs/
 *.log
-*.pth
 
 .idea/
 .vscode/
 .DS_Store
+
