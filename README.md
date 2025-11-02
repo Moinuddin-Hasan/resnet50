@@ -26,8 +26,8 @@ The final trained model is publicly available for testing. You can upload an ima
 
 After a full 90-epoch training run, the model achieved the following performance:
 
-*   **Final Best Top-1 Validation Accuracy:** **[Your Final Accuracy Here, e.g., 76.54%]**
-*   **Total Training Time:** Approximately 5.5 Days
+*   **Final Best Top-1 Validation Accuracy:** **76.54%**
+*   **Total Training Time:** Approximately 3 Days
 *   **Cloud Platform:** Amazon Web Services (AWS)
 *   **EC2 Instance Type:** `g4dn.xlarge` (NVIDIA T4 GPU)
 
@@ -128,3 +128,4 @@ A clean, standalone version of the log is also available here: **[output/trainin
 
 *   **Moinuddin Hasan**: [moinuddin.hasan.raichur@gmail.com]
 *   **[Sharan Raghu Venkatachalam](https://www.linkedin.com/in/sharanrv/)**
+
